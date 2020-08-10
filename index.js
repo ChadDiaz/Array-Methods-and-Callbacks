@@ -1,5 +1,5 @@
 import { fifaData } from './fifa.js';
-console.log(fifaData);
+// console.log(fifaData);
 
 // console.log('its working');
 console.log("");
@@ -13,24 +13,14 @@ console.log("");
 (d) Away Team goals for 2014 world cup final
 (e) Winner of 2014 world cup final */
 console.log ("*******   TASK 1 ANSWERS   *********")
-let team = fifaData.filter(element => element.Year === 2014);
-for (let i = 0; i< team.length; i++){
-    if (team[i]["Stage"] === "Final"){
-        console.log("The Task 1a answer is " + team[i]["Home Team Name"]);
-    }
-    if (team[i]["Stage"] === "Final") {
-        console.log("The Task 1b answer is " + team[i]["Away Team Name"]);
-    }
-    if (team[i]["Stage"] === "Final"){
-        console.log("The Task 1c answer is " + team[i]["Home Team Goals"]);
-    }
-    if (team[i]["Stage"] === "Final"){
-        console.log("The Task 1d answer is " + team[i]["Away Team Goals"]);
-    }
-    if (team[i]["Stage"] === "Final"){
-        console.log("The Task 1e answer is " + team[i]["Win conditions"]);
-    }
-}
+let team = fifaData.filter(element => element.Year === 2014 && element.Stage === "Final");
+
+console.log("The Task 1a answer is " + team[0]["Home Team Name"]);
+console.log("The Task 1b answer is " + team[0]["Away Team Name"]);
+console.log("The Task 1c answer is " + team[0]["Home Team Goals"]);
+console.log("The Task 1d answer is " + team[0]["Away Team Goals"]);
+console.log("The Task 1e answer is " + team[0]["Win conditions"]);
+
 console.log("");
 
 
